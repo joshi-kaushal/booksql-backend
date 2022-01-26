@@ -5,7 +5,7 @@ import cors from "cors"
 import path from "path"
 import schema from "./schema/schema.js";
 
-
+// MongoDB Connection
 mongoose.connect("mongodb+srv://kaushal:booksql@cluster0.9ldef.mongodb.net/books?retryWrites=true&w=majority")
 mongoose.connection.once("open", () => console.log(`connected to database!`))
 
