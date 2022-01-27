@@ -29,7 +29,8 @@ app.use("/graphql", graphqlHTTP({
 // Deployment
 if(process.env.NODE_ENV === "production") {
 	app.use(express.static(path.resolve(__dirname, "./build")));
-	app.post("/", (req, res) => res.redirect("/"))
+	app.post("/", (req, res) => res.json({"status:": "lol"}))
+	
 	app.get("*", (req, res) => {
 		res.sendFile(path.resolve(__dirname, "./build", "index.html"));
 	});
