@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 5000
 // GraphQL
 app.use("/graphql", graphqlHTTP({
 	schema,
-	graphiql: true
+	// graphiql: true
 }))
 
 // Deployment
