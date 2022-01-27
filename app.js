@@ -29,9 +29,11 @@ app.use("/graphql", graphqlHTTP({
 // Deployment
 if(process.env.NODE_ENV === "production") {
 	app.use(express.static(path.resolve(__dirname, "./build")));
+	app.post("/", (req, res) => res.redirect("/"))
 	app.get("*", (req, res) => {
 		res.sendFile(path.resolve(__dirname, "./build", "index.html"));
 	});
+
 }
 
 // Listening on port PORT || 5000
