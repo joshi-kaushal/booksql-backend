@@ -11,7 +11,7 @@ import {
 
 
 const client = new ApolloClient({
-  uri: "https://mysterious-peak-37758.herokuapp.com/",
+  uri: "https://books-ql.herokuapp.com/",
   cache: new InMemoryCache()
 });
 
